@@ -18,19 +18,13 @@ body {
     margin: auto;
     width: 1440px;
     height: 1889.02px;
-    top: 188px;
-    left: 1599px;
-    padding: 0px 0px 58px 0px;
-    gap: 0px;
-    opacity: 0px;
 }
 
 .main-container {
     width: 1,440px;
     height: 1,722px;
     padding: 0px 50px 0px 50px;
-    gap: 35px;
-    opacity: 0px;    
+    gap: 35px; 
 }
 
 a {
@@ -61,47 +55,51 @@ ul {
 /****** Header ***********/
 header {
     width: 1440px;
-    height: 79px;
-    gap: 0px;
-    opacity: 0px;    
+    height: 79px; 
     display: flex;
     justify-content: space-between;
 }
 
-header .logo-header {
+.logo-header {
     width: 161.09px;
     height: 79px;
-    padding: 30px 50px 30px 50px;
+    padding: 30px 0px 0px 0px;
     gap: 10px;
-    opacity: 0px;    
 }
 
-header .logo-header img {
+.logo-header img {
     width: 61.09px;
     height: 19px;
 }
 
-header nav {
+#bouton {
+    width: 244px;
+    height: 35px;    
+}
+
+nav {
     width: 344px;
     height: 35px;
     left: 1096px;
     padding: 0px 50px 0px 50px;
-    gap: 68px;
-    opacity: 0px;    
+    gap: 68px;   
 }
 
-header nav a {
-    padding: 50px 25px;
-    color: var(--black);
-    border-top: 2px transparent solid;
+nav a.selected-lodg {
+    display: inline-block;
+    width: 113px;
+    height: 35px;    
+}
+
+
+nav a {
     transition: .3s
 }
 
-header nav a:hover,.selected {
-    color: var(--blue);
-    border-top: 2px var(--blue) solid
+.selected-lodg a:active {
+    color: #0065FC;
+    text-decoration: overline blue;
 }
-
 
 
 
@@ -110,7 +108,8 @@ header nav a:hover,.selected {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px
+    gap: 35px;
+    margin: 0px 0px 40px 0px;
 }
 
 #filter .main-title {
@@ -141,7 +140,7 @@ header nav a:hover,.selected {
     border-radius: 20px
 }
 
-.search-location .map-marker {
+.map-marker {
     min-width: 50px;
     background-color: rgba(242, 242, 242, 1);
     font-size: 18px;
@@ -165,19 +164,20 @@ header nav a:hover,.selected {
     font-weight: 500
 }
 
-.search-location .btn-search {
-    background-color: var(--blue);
+.btn-search {
     color: rgb(255, 255, 255);
     background-color:rgba(0, 101, 252, 1);
     border-radius: 0 16px 16px 0;
+    border-color: transparent;
     padding: 0 18px;
     font-size: 18px;
+    font-weight: 700;
     font-family: inherit;
     cursor: pointer;
     transition: .3s
 }
 
-.search-location .btn-mobile {
+.btn-mobile {
     width: 50px;
     border-radius: 16px;
     display: flex;
@@ -186,76 +186,94 @@ header nav a:hover,.selected {
     display: none
 }
 
-.search-location button:hover {
-    background-color: var(--blue-hover)
-}
-
 .all-filters {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px
+    gap: 15px
 }
 
-.all-filters ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 25px
+a.icon-filter {
+    display: inline;
+    gap: 5px
 }
-
-.all-filters ul li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-    transition: .5s;
-    padding: 4px 4px 4px 4px;
-    border-radius: 25px 25px 25px 25px;
-    border: 2px solid rgba(217, 217, 217, 1)
-}
-
-.all-filters ul li:hover {
-    background-position: left;
-    box-shadow: inset 0 0 0 2px var(--light-blue)
-}
-
-.all-filters ul li .icon-filter {
-    background-color: var(--light-blue);
-    color: var(--blue);
+.money-icon {
     height: 50px;
-    width: 50px;
-    font-size: 18px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center
+    padding: 4px 19px 4px 19px;
+    gap: 10px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px 25px 25px 25px;  
+    background-color: white;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 19.96px;
+    text-align: center;    
 }
 
-.all-filters ul li span {
-    margin: 14px 24px 14px 14px;
-    font-size: 18px;
-    font-weight: 700
+.human-icon {
+    height: 50px;
+    padding: 4px 19px 4px 19px;
+    gap: 10px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px 25px 25px 25px;  
+    background-color: white;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 19.96px;
+    text-align: center;    
 }
 
-.Indice-info {
+.heart-icon {
+    height: 50px;
+    padding: 4px 19px 4px 19px;
+    gap: 10px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px 25px 25px 25px;  
+    background-color: white;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 19.96px;
+    text-align: center;    
+}
+
+.fire-icon {
+    height: 50px;
+    padding: 4px 19px 4px 19px;
+    gap: 10px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px 25px 25px 25px;  
+    background-color: white;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 19.96px;
+    text-align: center;    
+}
+
+.indice-info {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px
+    gap: 12px;
 }
 
-.Indice-info .icon-info {
+.icon-filter img {
+    position: relative;
+    right: 5px;
+    top: 5px;
+}
+
+.indice-icon {
     min-width: 23px;
     height: 23px;
-    border: 1px solid var(--dark-grey);
+    border: 1px solid #D9D9D9;
+    border-radius: 25px 25px 25px 25px;
     color: var(--blue);
-    border-radius: 50px;
     font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center
 }
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -386,7 +404,7 @@ header nav a:hover,.selected {
     align-items: center;
 }
 
-.populaires-cards .card {
+.card {
     display: flex;
     margin-top: 33px;
 }
@@ -398,7 +416,7 @@ header nav a:hover,.selected {
     border-bottom-left-radius: 20px;
 }
 
-.populaires-cards .card-content {
+.card-content {
     width: 67%;
     padding-left: 15px;
     display: flex;
@@ -407,16 +425,16 @@ header nav a:hover,.selected {
     box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
+.card-title {
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
+.card-subtitle {
     margin: 0;
 }
 
-.populaires-cards .card-rating {
+.card-rating {
     margin-bottom: 5px;
 }
 
@@ -439,11 +457,17 @@ header nav a:hover,.selected {
     padding: 30px;
 }
 
-#activity .activity-cards {
+.activity-cards {
     display: flex;
     justify-content: space-between;
     height: 450px;
     gap: 30px
+}
+
+.activity-title {
+font-size: 22px;
+font-weight: 700;
+line-height: 25.83px;
 }
 
 .activity-group {
@@ -451,7 +475,7 @@ header nav a:hover,.selected {
     max-height: 439px;
 }
 
-.activity-group .activity-group-card {
+.activity-group-card {
     box-shadow: 0 0 15px 3px rgba(0,0,0,.1);
     transition: .4s;
     border-radius: 20px;
@@ -462,7 +486,7 @@ header nav a:hover,.selected {
     overflow: hidden;
 }
 
-.activity-group .activity-group-card:hover {
+.activity-group-card:hover {
     box-shadow: 0 0 15px 6px rgba(0,0,0,.1);
     transform: scale(1.02)
 }
@@ -474,12 +498,15 @@ header nav a:hover,.selected {
     border-radius: 20px 20px 0 0
 }
 
-.activity-group .activity-group-card h4 {
+.activity-group-card h4 {
     color: var(--black);
     padding: 24px 20px
 }
 
-
+.wide-image {
+    width: 100%;
+    height: 50%;
+}
 
 
 
@@ -497,33 +524,32 @@ footer {
     background: rgba(242, 242, 242, 1);
 }
 
-footer .footer-container {
+.footer-container {
     max-width: 1440px;
     margin: auto;
-    padding: 50px 0;
+    padding: 0px 20px;
     display: flex;
     flex-direction: row;
-    gap: 250px
+    gap: 250px;
 }
 
-footer .footer-container .footer-links {
+.footer-links {
     display: flex;
     flex-direction: column;
-    gap: 24px
 }
 
-footer .footer-container .footer-links ul {
+.footer-links ul {
     display: flex;
     flex-direction: column;
     gap: 12px
 }
 
-footer .footer-container .footer-links ul li a {
+.footer-links ul li a {
     font-weight: 500;
     color: var(--black)
 }
 
-footer .footer-container .footer-links ul li a:hover {
+.footer-links ul li a:hover {
     text-decoration: underline
 }
 
