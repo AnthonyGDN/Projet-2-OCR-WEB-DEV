@@ -21,10 +21,7 @@ body {
 }
 
 .main-container {
-    width: 1,440px;
-    height: 1,722px;
     padding: 0px 50px 0px 50px;
-    gap: 35px; 
 }
 
 a {
@@ -78,9 +75,9 @@ header {
 }
 
 nav {
+    display: flex;
     width: 344px;
     height: 35px;
-    left: 1096px;
     padding: 0px 50px 0px 50px;
     gap: 68px;   
 }
@@ -91,16 +88,19 @@ nav a.selected-lodg {
     height: 35px;    
 }
 
-
 nav a {
-    transition: .3s
+    padding-top: 20px;
 }
 
-.selected-lodg a:active {
+nav a:hover {
     color: #0065FC;
-    text-decoration: overline blue;
+    border-top :2px solid #0065FC
 }
 
+.nav-active {
+    color: #0065FC;
+    border-top :2px solid #0065FC
+}
 
 
 /****** Title And Filter ***********/
@@ -124,12 +124,10 @@ nav a {
 
 .title-h1 {
     font-size: 26px;
-    margin: 0
 }
 
 .filter-h2 {
     font-size: 22px;
-    margin: 0
 }
 
 .search-location {
@@ -174,7 +172,6 @@ nav a {
     font-weight: 700;
     font-family: inherit;
     cursor: pointer;
-    transition: .3s
 }
 
 .btn-mobile {
@@ -200,7 +197,6 @@ a.icon-filter {
 .money-icon {
     height: 50px;
     padding: 4px 19px 4px 19px;
-    gap: 10px;
     border: 2px solid #D9D9D9;
     border-radius: 25px 25px 25px 25px;  
     background-color: white;
@@ -213,7 +209,6 @@ a.icon-filter {
 .human-icon {
     height: 50px;
     padding: 4px 19px 4px 19px;
-    gap: 10px;
     border: 2px solid #D9D9D9;
     border-radius: 25px 25px 25px 25px;  
     background-color: white;
@@ -226,7 +221,6 @@ a.icon-filter {
 .heart-icon {
     height: 50px;
     padding: 4px 19px 4px 19px;
-    gap: 10px;
     border: 2px solid #D9D9D9;
     border-radius: 25px 25px 25px 25px;  
     background-color: white;
@@ -239,7 +233,6 @@ a.icon-filter {
 .fire-icon {
     height: 50px;
     padding: 4px 19px 4px 19px;
-    gap: 10px;
     border: 2px solid #D9D9D9;
     border-radius: 25px 25px 25px 25px;  
     background-color: white;
@@ -248,6 +241,12 @@ a.icon-filter {
     line-height: 19.96px;
     text-align: center;    
 }
+
+.icon-filter :hover{
+    background-color: #DEEBFF;
+}
+
+
 
 .indice-info {
     display: flex;
@@ -262,16 +261,14 @@ a.icon-filter {
     top: 5px;
 }
 
-.indice-icon {
-    min-width: 23px;
-    height: 23px;
+.indice-info-contour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
     border: 1px solid #D9D9D9;
     border-radius: 25px 25px 25px 25px;
-    color: var(--blue);
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center
 }
 
 
@@ -291,9 +288,6 @@ a.icon-filter {
 
 /****** Hebergements ***********/
 .hebergements {
-    background-color: var(--grey);
-    padding: 40px;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -311,16 +305,17 @@ a.icon-filter {
 }
 
 .card-hebergement {
-    width: Fill (250.33px)px;
-    height: Hug (207.25px)px;
-    padding: 0px 0px 15px 0px;
-    gap: 4px;
-    border-radius: 20px 0px 0px 0px;
-    opacity: 0px;    
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-top: solid 6px white;
+    border-left: solid 6px white;
+    border-right: solid 6px white;
+    border-radius: 25px 25px 25px 25px;
     box-shadow: 0 0 15px 3px rgba(0,0,0,.1)
 }
 
-.cards-hebergement {
+.group-card-hebergement {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -328,14 +323,10 @@ a.icon-filter {
     gap: 30px 0
 }
 
-.cards-hebergement a {
+.group-card-hebergement a {
     width: 31%
 }
 
-.card-hebergement:hover {
-    box-shadow: 0 0 15px 6px rgba(0,0,0,.1);
-    transform: scale(1.02)
-}
 
 .card-hebergement img {
     width: 100%;
@@ -346,11 +337,7 @@ a.icon-filter {
 
 
 .card-hebergement-content {
-    width: Fill (250.33px)px;
-    height: Hug (64.25px)px;
-    padding: 0px 15px 0px 15px;
-    gap: 8px;
-    opacity: 0px;    
+    padding: 0px 0px 0px 15px;
 }
 
 .card-hebergement-desc {
@@ -376,6 +363,7 @@ a.icon-filter {
 
 .card-hebergement-subtitle {
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 /****** Populaires ***********/
@@ -409,7 +397,7 @@ a.icon-filter {
     margin-top: 33px;
 }
 
-.populaires-cards img {
+.populaires-card img {
     width: 33%;
     height: 136px;
     border-top-left-radius: 20px;
@@ -438,11 +426,6 @@ a.icon-filter {
     margin-bottom: 5px;
 }
 
-.card:hover {
-    box-shadow: 0 0 15px 6px rgba(0,0,0,.1);
-    transform: scale(1.02)  
-}
-
 
 
 
@@ -457,7 +440,7 @@ a.icon-filter {
     padding: 30px;
 }
 
-.activity-cards {
+.activity-card {
     display: flex;
     justify-content: space-between;
     height: 450px;
@@ -476,25 +459,16 @@ line-height: 25.83px;
 }
 
 .activity-group-card {
-    box-shadow: 0 0 15px 3px rgba(0,0,0,.1);
-    transition: .4s;
     border-radius: 20px;
     height: 439px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-}
-
-.activity-group-card:hover {
     box-shadow: 0 0 15px 6px rgba(0,0,0,.1);
-    transform: scale(1.02)
 }
 
 .activity-group img {
-    width: 100%;
-    height: 100%;
+    height: 380px;
+    width: 297.5px;
     object-fit: cover;
+    overflow: hidden;
     border-radius: 20px 20px 0 0
 }
 
@@ -508,8 +482,9 @@ line-height: 25.83px;
     height: 50%;
 }
 
-
-
+.h3-activity {
+    margin: 15px;
+}
 
 
 
@@ -531,6 +506,7 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 250px;
+    border-bottom: solid 50px rgba(242, 242, 242, 1);
 }
 
 .footer-links {
@@ -592,6 +568,7 @@ footer {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
+
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -606,21 +583,21 @@ footer {
         margin-top: 50px;
     }
 
-    .populaires-cards {
+    .populaires-card {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .populaires-cards a {
+    .populaires-card a {
         width: 30%;
     }
 
-    .populaires-cards .card-title {
+    .populaires-card .card-title {
         font-size: 14px;
     }
 
-    .populaires-cards .card-subtitle {
+    .populaires-card .card-subtitle {
         font-size: 13px;
     }
 }
