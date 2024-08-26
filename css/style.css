@@ -190,7 +190,7 @@ nav a:hover {
     gap: 15px
 }
 
-a.icon-filter {
+.icon-filter {
     display: inline;
     gap: 5px
 }
