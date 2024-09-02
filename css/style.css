@@ -367,223 +367,243 @@ main {
     font-size: 8px;
 }
 
-/****** activity ***********/
+/*********** activity ***********/
 #activity {
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    gap: 30px;
 }
 
-.activity-card {
+.all-activity-cards {
     display: flex;
     justify-content: space-between;
     height: 450px;
-    gap: 30px
 }
 
-.activity-title {
-font-size: 22px;
-font-weight: 700;
-line-height: 25.83px;
+.full-activity-card {
+    width: 22%;
+    height: 100%;
 }
 
-.activity-group {
-    max-width: 297.5px;
-    max-height: 439px;
-}
-
-.activity-group-card {
+.activity-card {
+    background-color: var(--white);
+    box-shadow: 0 0 15px 3px rgba(0,0,0,.1);
     border-radius: 20px;
-    height: 439px;
-    box-shadow: 0 0 15px 6px rgba(0,0,0,.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.activity-group img {
-    height: 380px;
-    width: 297.5px;
+.full-activity-card img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     overflow: hidden;
-    border-radius: 20px 20px 0 0
+    border-radius: 20px 20px 0 0;
 }
 
-.activity-group-card h4 {
+.activity-card h4 {
     color: var(--black);
-    padding: 24px 20px
+    padding: 24px 20px;
 }
 
-.wide-image {
-    width: 100%;
-    height: 50%;
-}
-
-.h3-activity {
-    margin: 15px;
-}
-
-/****** Footer ***********/
+/*********** Footer ***********/
 footer {
+    background-color: var(--grey);
     margin-top: 60px;
-    background: rgba(242, 242, 242, 1);
 }
 
 .footer-container {
     max-width: 1440px;
     margin: auto;
-    padding: 0px 20px;
+    padding: 50px 0;
     display: flex;
     flex-direction: row;
     gap: 250px;
-    border-bottom: solid 50px rgba(242, 242, 242, 1);
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    gap: 24px;
 }
 
 .footer-links ul {
     display: flex;
     flex-direction: column;
-    gap: 12px
+    gap: 12px;
 }
 
 .footer-links ul li a {
     font-weight: 500;
-    color: var(--black)
+    color: var(--black);
 }
 
 .footer-links ul li a:hover {
-    text-decoration: underline
-}
-
-.h2-footer {
-    font-size: 18px;
+    text-decoration: underline;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-
-@media screen and (max-width: 1024px) {
-    header {
-        max-width: 1024px;
-        margin-bottom: 10px;
-    }
-
-    body {
-        max-width: 1024px;
-    }    
-
-    main {
-        max-height : 1700px;
-    }
-
-    footer {
-        margin: 0px;    
-    }
-
-    nav {
-        padding: 0px;
-    }
-
-    .search-location {
-        margin-top: 15px
-    }
-
-    #filter {
-        gap: 8px;    
-    }
-
-    .all-filters {
-        flex-direction:column;
-        align-items: flex-start;
+@media (max-width: 1024px) {
+    main,header,footer {
+        width:auto;
+        padding: 0 20px;
     }
 
     #hebergements-and-populaires {
-        flex-direction: column;   
-        gap: 0px; 
+        flex-direction: column;
     }
 
-    .hebergements {
-        width: 100%;
-    }
-
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
+    .all-populaires-cards {
+        flex-direction:column;
     }
 
     .populaires-card {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        width: auto;
     }
 
-    .populaires-card a {
-        width: 30%;
-    }
-
-    .populaires-card .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-card .card-subtitle {
-        font-size: 13px;
-    }
-    
-    .activity-group {
-        max-width: 193.5px;
-        max-height: 270px;
-    }
-    
-    .activity-group-card {
-        width: 200px;
-        max-height: 270px;
-    }
-    
-    .activity-group img {
-        height: 193.5px;
-        width: 200px;
+    .populaires-card img {
+        width: 250px;
     }
 
     .footer-container {
-        gap: 150px;
-        border-bottom: solid 50px rgba(242, 242, 242, 1);
+        gap: 14%;
+    }
+
+    .all-activity-cards {
+        height: auto;
+        gap: 25px;
+    }
+
+    .full-activity-card {
+        width: 100%;
+    }
+
+    .activity-card img {
+        height: 200px;
     }
 }
 
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    main,header,footer {
+        width:auto;
+        padding: 0;
+    }
+
     header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 30px;
+        margin: 30px 0;
     }
 
-    body {
-        max-width: 767.98px;
-    } 
-    
-    .logo-header {
+    header nav {
+        width: 100%;
+    }
+
+    header nav a {
+        width: 50%;
+        padding: 14px;
+        border-bottom: 3px var(--grey) solid;
+        border-top: none;
         display: flex;
-        justify-content: center ;
-        width: 280px;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    nav a:hover {
-        color: #0065FC;
-        border-bottom; :2px solid #0065FC;
-        border-top: none;
-    }
-    
-    .nav-active {
-        color: #0065FC;
-        border-bottom :2px solid #0065FC;
+    header nav a:hover,.selected {
+        border-bottom: 3px var(--blue) solid;
         border-top: none;
     }
 
+    .search-location {
+        width: 100%;
+    }
+
+    .search-location input {
+        width: 100%;
+    }
+
+    .btn-mobile {
+        display: flex;
+    }
+
+    .btn-search {
+        display: none;
+    }
+
+    #filter {
+        padding: 0 20px;
+    }
+
+    .all-filters {
+        flex-direction: column;
+    }
+
+    #hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .hebergement {
+        background-color: transparent;
+        padding: 0 20px;
+    }
+
+    .all-hebergement-cards {
+        gap: 12px;
+    }
+
+    .all-hebergement-cards {
+        flex-direction: column;
+    }
+
+    .all-hebergement-cards a {
+        width: 100%;
+    }
+
+    .populaires {
+        border-radius: 0;
+        padding: 40px 20px;
+    }
+
+    .all-populaires-cards {
+        gap: 12px;
+    }
+
+    .populaires-card img {
+        width: 130px;
+    }
+
+    #activity {
+        padding: 0 20px;
+    }
+
+    .all-activity-cards {
+        justify-content: space-between;
+        flex-direction: column;
+        height: auto;
+        gap: 25px;
+    }
+
+    .activity-card img {
+        height: 120px;
+    }
+
+    footer {
+        padding: 0 30px;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
