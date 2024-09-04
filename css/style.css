@@ -60,6 +60,7 @@ header {
 
 .booki-logo {
     align-content: center;
+    margin: 20px 0px 50px 0px;
 }
 
 .booki-logo img {
@@ -412,13 +413,13 @@ main {
 /*********** Footer ***********/
 footer {
     background-color: var(--grey);
-    margin-top: 60px;
+    margin: 0px 200px 0px 200px;
 }
 
 .footer-container {
     max-width: 1440px;
-    margin: auto;
-    padding: 50px 0;
+    margin: 80px 0px 0px 20px;
+    padding: 20px 0px 20px 0px;
     display: flex;
     flex-direction: row;
     gap: 250px;
@@ -437,7 +438,8 @@ footer {
 }
 
 .footer-links ul li a {
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 16px;
     color: var(--black);
 }
 
@@ -445,12 +447,17 @@ footer {
     text-decoration: underline;
 }
 
+.footer-h3 {
+    font-size: 18px;
+    margin: 0px 0px -5px 0px;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    main,header,footer {
+    main, header, footer {
         width:auto;
         padding: 0 20px;
     }
@@ -488,7 +495,6 @@ footer {
         height: 200px;
     }
 }
-
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
