@@ -110,6 +110,7 @@ main {
 }
 
 .search-location {
+    height: 49px;
     display: inline-flex;
     flex-direction: row;
     border: 1px solid var(--grey);
@@ -127,7 +128,6 @@ main {
 }
 
 .search-location input {
-    height: 50px;
     padding-left: 20px;
     font-size: 18px;
     font-weight: 700;
@@ -152,16 +152,15 @@ main {
 }
 
 .btn-mobile {
-    width: 50px;
-    border-radius: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 49px;
+    height: 49px;
+    font-size: 17px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+    border-color: #0065FC;  
+    background: #0065FC;  
+    color: white;
     display: none;
-}
-
-.search-location button:hover {
-    background-color: var(--blue-hover);
 }
 
 .all-filters {
@@ -208,6 +207,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0px -15px 0px 0px;
 }
 
 .all-filters ul li span {
@@ -239,7 +239,9 @@ main {
 #hebergements-and-populaires {
     display: flex;
     flex-direction: row;
+    width: auto;
     gap: 40px;
+    margin-top: -30px;
 }
 
 .hebergement {
@@ -376,16 +378,18 @@ main {
 
 /*********** activity ***********/
 #activity {
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
+    width: auto;
+    border-radius: 20px;
     gap: 30px;
 }
 
 .all-activity-cards {
     display: flex;
-    justify-content: space-between;
     height: 450px;
+    gap: 30px;
+    margin: 0px 0px 0px 40px;
 }
 
 .full-activity-card {
@@ -394,13 +398,13 @@ main {
 }
 
 .activity-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--white);
     box-shadow: 0 0 15px 3px rgba(0,0,0,.1);
     border-radius: 20px;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .full-activity-card img {
@@ -418,8 +422,9 @@ main {
 
 /*********** Footer ***********/
 footer {
+    width: auto;
     background-color: var(--grey);
-    margin: 0px 200px 0px 200px;
+    margin: 0px 200px 0px 230px;
 }
 
 .footer-container {
@@ -477,10 +482,6 @@ footer {
         font-weight: 700;
     }
 
-    .icon-filter {
-        margin: 0px -15px 0px 0px;
-    }
-
     .all-filters ul {
         gap: 10px;
         margin: 0px 60px 0px 0px;
@@ -492,7 +493,7 @@ footer {
 
     #hebergements-and-populaires {
         flex-direction: column;
-        margin-top: -30px;
+        width: auto;
     }
 
     .populaires {
@@ -514,11 +515,15 @@ footer {
 
     .all-activity-cards {
         height: auto;
-        gap: 25px;
+        margin: 0px;
     }
 
     .full-activity-card {
         width: 100%;
+    }
+
+    #activity {
+        width: auto;
     }
 
     .activity-card img {
@@ -560,6 +565,10 @@ footer {
         margin: 30px 0;
     }
 
+    .booki-logo {
+        margin: 0px;
+    }
+
     header nav {
         width: 100%;
     }
@@ -581,6 +590,7 @@ footer {
 
     .search-location {
         width: 100%;
+        height: 47px;
     }
 
     .search-location input {
@@ -601,6 +611,20 @@ footer {
 
     .all-filters {
         flex-direction: column;
+        width: 500px;
+    }
+
+    .filtre-h3 {
+        margin: 0px 450px -10px 0px;
+    }
+
+    .all-filters ul li {
+        width: 162.5px;
+        height: 50px;
+    }
+
+    .all-filters ul li span {
+        font-size: 14px;
     }
 
     #hebergements-and-populaires {
@@ -633,6 +657,11 @@ footer {
         gap: 12px;
     }
 
+    .all-populaires-cards a {
+        width: 335px;
+        margin: 0px
+    }
+
     .populaires-card img {
         width: 130px;
     }
@@ -654,11 +683,16 @@ footer {
 
     footer {
         padding: 0 30px;
+        margin: 0px;
     }
 
     footer .footer-container {
         flex-direction: column;
         gap: 40px;
+    }
+
+    .footer-links {
+        margin-left: -20px;
     }
 }
 
